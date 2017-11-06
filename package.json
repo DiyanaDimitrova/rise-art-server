@@ -1,6 +1,7 @@
 {
   "name": "rise-art-server",
   "version": "1.0.0",
+  "description": "Server for Rise Art test",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js"
