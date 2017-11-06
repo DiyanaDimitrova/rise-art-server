@@ -32,7 +32,7 @@ module.exports = {
         res.json({message: 'User is updated'})
       })
       .catch((err) => {
-        res.json({message: err})
+        res.json({message: 'User could not be updated'})
       })
   },
   deleteUser: (req, res) => {
@@ -42,8 +42,7 @@ module.exports = {
          res.json({message: 'User is deleted'})
        })
        .catch((err) => {
-         console.log(err)
-         res.json({message: err})
+         res.json({message: 'User could not be updated'})
       })
   }
 }
