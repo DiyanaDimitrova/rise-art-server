@@ -33,10 +33,10 @@ module.exports = {
       })
       .exec()
       .then(() => {
-        res.json({ message: 'User is updated' })
+        res.json({ message: 'User is updated successfully!' })
       })
       .catch((err) => {
-        res.json({ message: 'User could not be updated' })
+        res.json({ message: 'User could not be updated!' })
       })
   },
   // delete user
@@ -44,10 +44,10 @@ module.exports = {
     User
       .findByIdAndRemove(req.params.id)
       .then(() => {
-        res.json({ message: 'User is deleted' })
+        res.json({ message: 'User is deleted successfully!' })
       })
       .catch((err) => {
-        res.json({ message: 'User could not be updated' })
+        res.json({ message: 'User could not be updated!' })
       })
   }
 }
