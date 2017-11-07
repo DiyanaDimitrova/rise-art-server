@@ -1,8 +1,9 @@
+// model of the User collection
 const mongoose = require('mongoose')
 const faker = require('faker')
 
 let requiredValidationMessage = '{PATH} is required'
-
+// shema of the user
 let userSchema = mongoose.Schema({
   name: { type: String, unique: true },
   email: { type: String },
@@ -20,6 +21,7 @@ let userSchema = mongoose.Schema({
 })
 
 let User = mongoose.model('User', userSchema)
+//creation of User with fake data
 const newUser = () => {
   return {
     name: faker.name.findName(),
@@ -37,6 +39,7 @@ const newUser = () => {
     bio: faker.lorem.paragraph()
   }
 }
+//seed data for the users
 module.exports.seedUsers = () => {
   User.find({}).then(users => {
     if (users.length === 0) {

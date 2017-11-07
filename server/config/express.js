@@ -1,8 +1,8 @@
+// configuration of the express
 const express = require('express')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 const cors = require('cors')
-
 
 module.exports = (config, app) => {
   app.use(bodyParser.json({ limit: '50mb' }))

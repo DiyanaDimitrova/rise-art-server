@@ -1,3 +1,4 @@
+// routes, exposed by the project
 const controllers = require('../controllers')
 
 module.exports = (app) => {

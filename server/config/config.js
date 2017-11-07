@@ -1,3 +1,4 @@
+// config file of the project
 const path = require('path')
 
 let rootPath = path.normalize(path.join(__dirname, '/../../'))

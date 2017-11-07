@@ -1,3 +1,4 @@
+//index file of the project
 const express = require('express')
 let app = express()
 

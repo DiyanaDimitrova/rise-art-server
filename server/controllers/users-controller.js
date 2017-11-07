@@ -1,6 +1,8 @@
+// controller about users
 let User = require('mongoose').model('User')
 
 module.exports = {
+  // retrieve all users
   getAllUsers: (req, res) => {
     User
       .find()
@@ -11,6 +13,7 @@ module.exports = {
         res.json({ message: err })
       })
   },
+  // retrieve user by id
   getUser: (req, res) => {
     User
       .findById(req.params.id)
@@ -21,6 +24,7 @@ module.exports = {
         res.json({ message: err })
       })
   },
+  // update name of the user
   updateUser: (req, res) => {
     let name = req.body.name
     User
@@ -35,6 +39,7 @@ module.exports = {
         res.json({ message: 'User could not be updated' })
       })
   },
+  // delete user
   deleteUser: (req, res) => {
     User
       .findByIdAndRemove(req.params.id)

@@ -1,3 +1,4 @@
+// make connection to the mongoDB database
 let mongoose = require('mongoose')
 mongoose.Promise = global.Promise
 
